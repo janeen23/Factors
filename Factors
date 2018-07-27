@@ -1,0 +1,28 @@
+package countfactors;
+
+import java.util.*;
+
+/**
+ * User enters a number & the factors of it are displayed.
+ * @author Janeen
+ */
+public class CountFactors {
+
+    public static void main(String[] args) {
+        System.out.println("Enter a Number: ");
+
+        Scanner S = new Scanner(System.in);
+        int number = S.nextInt();
+        int count = 0;
+
+        // Identifies and Counts Factors
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                System.out.print(i + ",");
+                count++;
+            }
+        }
+        System.out.println(" " + number + " has " + count + " factors!");
+    }
+
+}
